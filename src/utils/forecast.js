@@ -22,7 +22,8 @@ const forecast = (latitude, logitude, callback) => {
             callback(undefined, response.body.daily.data[0].summary +
                 ' It is currently ' + current.temperature +
                 ' degrees out. Temperature Height: ' +
-                response.body.daily.data[0].temperatureHigh +
+                response.body.daily.data[0].temperatureHigh + 
+                ' humidity is :' + current.humidity + 
                 ' and Temperature Low: ' + response.body.daily.data[0].temperatureLow + '.  There is a ' + current.precipProbability + '% chance of rain.')
         }
     })
